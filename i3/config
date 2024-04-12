@@ -45,8 +45,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# or left-clicking anywhere into the window while holding the floating modifier.tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
@@ -245,3 +244,7 @@ exec --no-startup-id ~/.config/transparent-terminal.sh
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Natural Scrolling Enabled" 1
 
+
+# for 3 finger gesture workspace switching
+exec_always --no-startup-id libinput-gestures-setup start
+bindsym --release --whole-window button3 exec /home/hemanth/.config/i3/workspace-switch.sh $(/usr/local/bin/libinput-gestures-cli get-gesture-swipe-fingers)
