@@ -248,3 +248,28 @@ exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinpu
 # for 3 finger gesture workspace switching
 exec_always --no-startup-id libinput-gestures-setup start
 bindsym --release --whole-window button3 exec /home/hemanth/.config/i3/workspace-switch.sh $(/usr/local/bin/libinput-gestures-cli get-gesture-swipe-fingers)
+
+# Autotiling
+exec --no-startup-id /usr/local/bin/autotiling
+
+# Blur Background
+exec --no-startup-id picom --config ~/.config/picom.conf
+
+# Remove Borders and title of windows
+for_window [class="^.*"] border pixel 0
+
+
+# Brightness screen control
+
+# Increase brightness
+bindsym F12 exec --no-startup-id xbacklight -inc 10
+# Decrease brightness
+bindsym F11 exec --no-startup-id xbacklight -dec 10
+
+
+
+# Focused window bright and non focused dull
+for_window [class="^.*"] focus opacity 1.0
+
+for_window [class="^.*"] unfocus opacity 0.7
+
