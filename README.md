@@ -1,4 +1,4 @@
 # Config-files
-i3 window manager,
-zsh,
-kali linux
+for i3 window manager
+1. polybar
+2. zsh
