@@ -275,6 +275,6 @@ for_window [urgent=latest] opacity $unfocused_window_opacity
 
 # Brightness Adjustment
 # Increase brightness
-bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5%
+bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && brightness 
 # Decrease brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%-
+bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && brightness
