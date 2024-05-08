@@ -253,9 +253,6 @@ exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinpu
 
 bindsym --release --whole-window button3 exec /path/to/your/script.sh $(/usr/bin/xdotool get_desktop)
 
-# Autotiling
-exec --no-startup-id /usr/local/bin/autotiling
-
 # Picom
 exec --no-startup-id picom --config /home/hemanth/.config/picom/picom.conf
 
@@ -284,3 +281,7 @@ for_window [urgent=latest] opacity $unfocused_window_opacity
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && brightness 
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && brightness
+
+#Autotiling
+exec_always --no-startup-id i3-auto-tiling
+
