@@ -9,6 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
+# ZSH_THEME="robbyrussell"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,13 +71,13 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting copyfile docker docker-compose safe-paste)
 
 # Set custom prompt symbol
 if [ "$EUID" -eq 0 ]; then
-  PROMPT='%{$fg[cyan]%}%n💀%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
+  PROMPT='%{$bg[green]%}%{$fg[cyan]%}%n💀%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
 else
-  PROMPT='%{$fg[cyan]%}%n㉿%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
+  PROMPT='%{$bg[green]%}%{$fg[cyan]%}%n㉿%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -233,6 +234,10 @@ alias la='ls -A'
 alias l='ls -CF'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
+alias c='clear'
+alias brave='brave-browser'
+alias x='exit'
+alias git push="git push -u origin main"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -260,5 +265,6 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
+
 
 
