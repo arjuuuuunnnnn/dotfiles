@@ -77,7 +77,7 @@ plugins=(git zsh-autosuggestions zsh-syntax-highlighting copyfile docker docker-
 if [ "$EUID" -eq 0 ]; then
   PROMPT='%{$bg[green]%}%{$fg[cyan]%}%n💀%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
 else
-  PROMPT='%{$bg[green]%}%{$fg[cyan]%}%n㉿%m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
+  PROMPT='%{$bg[green]%}%{$fg[cyan]%}%n %m%{$fg[yellow]%} %~%{$reset_color%} $(git_prompt_info)'
 fi
 
 source $ZSH/oh-my-zsh.sh
@@ -238,6 +238,8 @@ alias c='clear'
 alias brave='brave-browser'
 alias x='exit'
 alias git push="git push -u origin main"
+alias clean="stacer"
+alias screenrec="peek"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -266,5 +268,10 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Setting default Text editor to nvim
+export EDITOR="nvim"
+export VISUAL="nvim"
 
+# default neofetch run
+neofetch
 
