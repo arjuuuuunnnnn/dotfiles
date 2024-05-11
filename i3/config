@@ -259,7 +259,6 @@ exec --no-startup-id picom --config /home/hemanth/.config/picom/picom.conf
 # Remove Borders and title of windows
 for_window [class="^.*"] border pixel 0
 
-
 # Focused window bright and non focused dull
 for_window [class="^.*"] focus opacity 1.0
 
@@ -282,6 +281,13 @@ bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && bright
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && brightness
 
-#Autotiling
+# Autotiling
 exec_always --no-startup-id i3-auto-tiling
+
+# Media player controls
+bindsym XF86AudioPlay exec playerctl play
+bindsym XF86AudioPause exec playerctl pause
+bindsym XF86AudioNext exec playerctl next
+bindsym XF86AudioPrev exec playerctl previous
+
 
