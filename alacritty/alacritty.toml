@@ -1,0 +1,51 @@
+[window]
+padding = {x = 0, y = 0}
+opacity = 0.6
+title = "hemanth@kali"
+
+[font]
+normal = {family = "FreeMono"}
+size = 12
+
+[colors]
+[colors.primary]
+background = "#000000"
+foreground = "#dfdfdf"
+
+[colors.normal]
+black =   '#000000'
+red =     '#AD4900'
+green =   '#24E600'
+yellow =  '#AF8005'
+blue =    '#2A770F'
+magenta = '#2D1F9A'
+cyan =    '#21B0C6'
+white =   '#C1981E'
+
+[colors.bright]
+    black =   '#5E5C64'
+    red =     '#AD4900'
+    green =   '#33D17A'
+    yellow =  '#B28817'
+    blue =    '#2CA600'
+    magenta = '#990B6C'
+    cyan =    '#33C7DE'
+    white =   '#03FC89'
+
+[colors.dim]
+    black =   '#232323'
+    red =     '#74423f'
+    green =   '#5e6547'
+    yellow =  '#8b7653'
+    blue =    '#556b79'
+    magenta = '#6e4962'
+    cyan =    '#5c8482'
+    white =   '#828282'
+
+[cursor]
+style = "Underline"
+blink_interval = 750
+
+vi_mode_style = "Underline"
+
+
