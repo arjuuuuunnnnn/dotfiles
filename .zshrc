@@ -239,7 +239,8 @@ alias brave='brave-browser'
 alias x='exit'
 alias git push="git push -u origin main"
 alias clean="stacer"
-alias screenrec="peek"
+alias screenrec="recordmydesktop"
+alias music="deadbeef"
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
