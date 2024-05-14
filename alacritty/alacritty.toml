@@ -7,6 +7,19 @@ title = "hemanth@kali"
 normal = {family = "FreeMono"}
 size = 12
 
+[font.bold]
+family = "FreeMono"
+style = "Bold"
+
+[font.bold_italic]
+family = "FreeMono"
+style = "Bold"
+
+[font.italic]
+family = "FreeMono"
+style = "Italic"
+
+
 [colors]
 [colors.primary]
 background = "#000000"
@@ -48,4 +61,8 @@ blink_interval = 750
 
 vi_mode_style = "Underline"
 
+[keyboard]
+bindings = [
+    { key = "T", mods = "Control|Shift", action = "CreateNewTab" },
+]
 
