@@ -14,9 +14,9 @@ chosen_network=$(echo -e "$toggle\n$wifi_list" | uniq -u | rofi -dmenu -i -selec
 # Get name of connection
 read -r chosen_id <<< "${chosen_network:3}"
 
-if [ "$chosen_network" = "" ]; then
-	exit
-elif [ "$chosen_network" = "󰖩  Enable Wi-Fi" ]; then
+# if [ "$chosen_network" = "" ]; then
+# 	exit
+if [ "$chosen_network" = "󰖩  Enable Wi-Fi" ]; then
 	nmcli radio wifi on
 else
 	# Message to show when connection is activated successfully
