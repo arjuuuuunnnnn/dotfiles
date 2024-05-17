@@ -7,11 +7,10 @@
     fgp-color: #888888FF;
     b-radius: 8px;
     g-padding: 8px;
-    hl-color: #FFFFFFFF;
+    hl-color: #b7df44;
     hlt-color: #000000FF;
-    alt-color: #111111FF;
     wbg-color: #000000CC;
-    w-border: 2px solid;
+    w-border: 0px solid;
     w-border-color: #FFFFFFFF;
     w-padding: 12px;
 }
@@ -19,7 +18,7 @@
 configuration {
     modi: "drun";
     show-icons: true;
-    display-drun: "";
+    display-drun: "";
 }
 
 listview {
@@ -34,7 +33,7 @@ listview {
 
 window {
     transparency: "real";
-    width: 450px;
+    width: 750px;
     border-radius: @b-radius;
     background-color: @wbg-color;
     border: @w-border;
@@ -52,7 +51,7 @@ inputbar {
 }
 
 entry {
-    placeholder: "Search Apps";
+    placeholder: "What do you want?";
     text-color: @fg-color;
     placeholder-color: @fgp-color;
 }
@@ -81,7 +80,7 @@ element normal.normal {
 }
 
 element alternate.normal {
-	background-color: @alt-color;
+	background-color: transparent;
 	text-color: @fg-color;
 }
 
