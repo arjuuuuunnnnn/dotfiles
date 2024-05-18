@@ -3,7 +3,7 @@
     g-spacing: 10px;
     g-margin: 0;
     b-color: #000000FF;
-    fg-color: #FFFFFFFF;
+    fg-color: #C0C0C0;
     fgp-color: #888888FF;
     b-radius: 8px;
     g-padding: 8px;
@@ -75,13 +75,17 @@ element alternate.normal {
 }
 
 element selected.active {
-    background-color: @hl-color;
-    text-color: @hlt-color;
+    background-color: transparent;
+    text-color: #FFFFFFFF;
+	border: 2px solid;
+	border-color: @hl-color;
 }
 
 element selected.normal {
-    background-color: @hl-color;
-    text-color: @hlt-color;
+    background-color: transparent;
+    text-color: #FFFFFFFF;
+	border: 2px solid;
+	border-color: @hl-color;
 }
 
 message {

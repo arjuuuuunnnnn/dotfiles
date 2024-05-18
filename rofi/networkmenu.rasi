@@ -1,6 +1,6 @@
 configuration {
-    show-icons:                     false;
-    display-drun: 					"";
+    show-icons:                     true;
+    display-drun: 					"";
     drun-display-format:            "{icon} {name}";
     disable-history:                false;
 	click-to-exit: 					true;
