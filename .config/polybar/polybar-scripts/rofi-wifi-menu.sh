@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-notify-send "Getting list of available Wi-Fi networks..."
+notify-send "Scanning Wi-Fi networks..."
 # Get a list of available wifi connections and morph it into a nice-looking list
 wifi_list=$(nmcli --fields "SECURITY,SSID" device wifi list | sed 1d | sed 's/  */ /g' | sed -E "s/WPA*.?\S/ /g" | sed "s/^--/ /g" | sed "s/  //g" | sed "/--/d")
 
@@ -20,7 +20,7 @@ if [ "$chosen_network" = "󰖩  Enable Wi-Fi" ]; then
 	nmcli radio wifi on
 else
 	# Message to show when connection is activated successfully
-  	success_message="You are now connected to the Wi-Fi network \"$chosen_id\"."
+  	success_message="Connected to \"$chosen_id\"."
 	# Get saved connections
 	saved_connections=$(nmcli -g NAME connection)
 	if [[ $(echo "$saved_connections" | grep -w "$chosen_id") = "$chosen_id" ]]; then
@@ -32,3 +32,4 @@ else
 		nmcli device wifi connect "$chosen_id" password "$wifi_password" | grep "successfully" && notify-send "Connection Established" "$success_message"
     fi
 fi
+
