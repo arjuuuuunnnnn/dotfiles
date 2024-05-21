@@ -224,36 +224,11 @@ for_window [class="^.*"] border_radius 10
 # wallpaper
 exec --no-startup-id feh --bg-scale /home/hemanth/Pictures/Wallpapers/Wallpaper.jpg
 
-# Powerbutton and etc things
-#set $Locker i3lock && sleep 1
-
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id $Locker, mode "default"
-#    bindsym e exec --no-startup-id i3-msg exit, mode "default"
-#    bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-#    bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-#    bindsym r exec --no-startup-id systemctl reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-#    # back to normal: Enter or Escape
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-
-# bindsym $mod+Pause mode "$mode_system"
-
-# default_border pixel 0
-
-# transperent terminal
-exec --no-startup-id ~/.config/i3/transparent-terminal.sh
 
 # for touchpad configs
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Natural Scrolling Enabled" 1
 
-
-bindsym --release --whole-window button3 exec /path/to/your/script.sh $(/usr/bin/xdotool get_desktop)
 
 # Picom
 exec --no-startup-id picom --config /home/hemanth/.config/picom/picom.conf
@@ -294,3 +269,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # Rofi
 bindsym Mod1+space exec --no-startup-id rofi -show drun
+
+# Powermenu
+# bindsym $mod+l exec --no-startup-id ~/.config/polybar/polybar-scripts/powermenu.sh
