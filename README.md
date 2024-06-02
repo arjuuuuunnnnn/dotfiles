@@ -19,4 +19,4 @@ cargo install --git https://gitlab.com/ximnoise/i3-auto-tiling
 ```
 
 #### Neovim configuration
-![https://github.com/arjuuuuunnnnn/nvim-config-linux](https://github.com/arjuuuuunnnnn/nvim-config-linux)
+[https://github.com/arjuuuuunnnnn/nvim-config-linux](https://github.com/arjuuuuunnnnn/nvim-config-linux)
