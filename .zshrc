@@ -9,7 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="agnoster"
-# ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussel"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -71,7 +71,21 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting copyfile docker docker-compose safe-paste)
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting 
+	copyfile 
+	docker 
+	docker-compose 
+	safe-paste
+	node
+	npm
+	nodenv
+	pip
+	pyenv
+
+)
 
 # Set custom prompt symbol
 if [ "$EUID" -eq 0 ]; then
@@ -156,7 +170,7 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 # History configurations
 HISTFILE=~/.zsh_history
-HISTSIZE=1000
+HISTSIZE=2000
 SAVEHIST=2000
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
 setopt hist_ignore_dups       # ignore duplicated commands history list
@@ -256,14 +270,14 @@ fi
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hemanth/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('~/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/hemanth/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/hemanth/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "~/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "~/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/hemanth/anaconda3/bin:$PATH"
+        export PATH="~/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
