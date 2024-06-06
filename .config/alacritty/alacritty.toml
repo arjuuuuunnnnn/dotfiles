@@ -30,7 +30,7 @@ black =   '#000000'
 red =     '#AD4900'
 green =   '#6F8FAF'
 yellow =  '#AF8005'
-blue =    '#16a34a'
+blue =    '#8BA446'
 magenta = '#6F8FAF'
 cyan =    '#21B0C6'
 white =   '#C1981E'
@@ -65,4 +65,6 @@ vi_mode_style = "Underline"
 bindings = [
     { key = "T", mods = "Control|Shift", action = "CreateNewTab" },
 ]
+
+
 
