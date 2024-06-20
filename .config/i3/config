@@ -13,7 +13,8 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+# font pango:monospace 8
+font pango:FreeMono 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -52,7 +53,6 @@ floating_modifier $mod
 bindsym $mod+Return exec alacritty
 
 # kill focused window
-# bindsym $mod+Shift+q kill
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
@@ -195,20 +195,20 @@ exec_always --no-startup-id ~/.config/i3/polybar.sh
 
 ## Screenshots
 # Shift+Print = Partial screenshot
-bindsym --release Shift+Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh partial
+bindsym --release Shift+Print exec --no-startup-id sh ~/.config/i3/screenshot.sh partial
 
 # Ctrl+Shift+Print = Partial screenshot also saved in clipboard
-bindsym --release Ctrl+Shift+Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh partial clipboard
+bindsym --release Ctrl+Shift+Print exec --no-startup-id sh ~/.config/i3/screenshot.sh partial clipboard
 
 # Print = screenshot of the whole screen saved
-bindsym --release Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh full
+bindsym --release Print exec --no-startup-id sh ~/.config/i3/screenshot.sh full
 
 # Ctrl+Print = screenshot of full screen also saved in clipboard
-bindsym --release Ctrl+Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh full clipboard
+bindsym --release Ctrl+Print exec --no-startup-id sh ~/.config/i3/screenshot.sh full clipboard
 
-bindsym --release Mod1+Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh current
+bindsym --release Mod1+Print exec --no-startup-id sh ~/.config/i3/screenshot.sh current
 
-bindsym --release Ctrl+Mod1+Print exec --no-startup-id sh /home/hemanth/.config/i3/screenshot.sh current clipboard
+bindsym --release Ctrl+Mod1+Print exec --no-startup-id sh ~/.config/i3/screenshot.sh current clipboard
 
 
 # GAPS BETWEEN WINDOWS
@@ -225,13 +225,13 @@ for_window [class="^.*"] border_radius 10
 exec --no-startup-id feh --bg-scale /home/hemanth/Pictures/Wallpapers/Wallpaper.jpg
 
 
-# for touchpad configs
+# touchpad configs:
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Tapping Enabled" 1
 exec --no-startup-id xinput --set-prop "DELL0979:00 04F3:30C4 Touchpad" "libinput Natural Scrolling Enabled" 1
 
 
 # Picom
-exec --no-startup-id picom --config /home/hemanth/.config/picom/picom.conf
+exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
 # Remove Borders and title of windows
 for_window [class="^.*"] border pixel 0
@@ -252,14 +252,15 @@ set $unfocused_window_opacity 0.7
 for_window [urgent=latest] opacity $unfocused_window_opacity
 
 
-# Brightness Adjustment
+# Brightness
 # Increase brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% && brightness 
 # Decrease brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- && brightness
 
 # Autotiling
-exec_always --no-startup-id i3-auto-tiling
+# exec_always --no-startup-id i3-auto-tiling
+exec_always --no-startup-id /home/hemanth/.cargo/bin/i3-auto-tiling
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play
@@ -267,8 +268,7 @@ bindsym XF86AudioPause exec playerctl pause
 bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
-# Rofi
+# Rofi launcher
 bindsym Mod1+space exec --no-startup-id rofi -show drun
 
-# Powermenu
-# bindsym $mod+l exec --no-startup-id ~/.config/polybar/polybar-scripts/powermenu.sh
+
