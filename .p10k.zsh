@@ -47,17 +47,17 @@ typeset -g POWERLEVEL9K_FOLDER_ICON=
 # Remove clock icon
 typeset -g POWERLEVEL9K_TIME_ICON=
 # Remove GitHub logo
-typeset -g POWERLEVEL9K_VCS_GIT_ICON=''
-typeset -g POWERLEVEL9K_VCS_GITHUB_ICON=''
+# typeset -g POWERLEVEL9K_VCS_GIT_ICON=''
+# typeset -g POWERLEVEL9K_VCS_GITHUB_ICON=''
 typeset -g POWERLEVEL9K_VCS_GIT_GITHUB_ICON=''
 # Remove duration/runtime symbol
 typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_PREFIX=''
 typeset -g POWERLEVEL9K_COMMAND_EXECUTION_TIME_VISUAL_IDENTIFIER_EXPANSION=''
 
 # Customize directory display
-typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=false
-typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=244
-typeset -g POWERLEVEL9K_DIR_FOREGROUND=244
+# typeset -g POWERLEVEL9K_DIR_ANCHOR_BOLD=false
+# typeset -g POWERLEVEL9K_DIR_ANCHOR_FOREGROUND=244
+# typeset -g POWERLEVEL9K_DIR_FOREGROUND=244
 
   # The list of segments shown on the right. Fill it with less important segments.
   # Right prompt on the last prompt line (where you are typing your commands) gets
@@ -213,7 +213,7 @@ typeset -g POWERLEVEL9K_DIR_FOREGROUND=244
 
   #################################[ os_icon: os identifier ]##################################
   # OS identifier color.
-  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND=255
+  typeset -g POWERLEVEL9K_OS_ICON_FOREGROUND='#b7df44'
   # Custom icon.
   typeset -g POWERLEVEL9K_OS_ICON_CONTENT_EXPANSION=' '
 
@@ -221,7 +221,7 @@ typeset -g POWERLEVEL9K_DIR_FOREGROUND=244
   # Transparent background.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_BACKGROUND=
   # Green prompt symbol if the last command succeeded.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=76
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND='#b7df44'
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS,VIOWR}_FOREGROUND=196
   # Default prompt symbol.
