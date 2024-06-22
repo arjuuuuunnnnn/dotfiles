@@ -4,7 +4,7 @@ for i3 window manager
 2. zsh - oh-my-zsh
 3. picom
 4. vim
-5. alacritty
+5. alacritty x powerlevel10k
 6. dunst
 7. neofetch
 8. ranger
