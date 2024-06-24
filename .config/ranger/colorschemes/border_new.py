@@ -1,137 +1,127 @@
 # This file is part of ranger, the console file manager.
 # License: GNU GPL version 3, see the file "AUTHORS" for details.
-# This theme was inspired by "RougarouTheme" for ranger and modified for a hacker-style look
-# Original: https://github.com/RougarouTheme/ranger
+# SubtleHack theme: A darker, less bright color scheme with border-only selection
 
 from __future__ import absolute_import, division, print_function
 
 from ranger.gui.colorscheme import ColorScheme
 from ranger.gui.color import (
-    black, blue, cyan, magenta, red, white, yellow, default,
-    normal, bold, reverse, default_colors,
+    black, blue, cyan, green, magenta, red, white, yellow, default,
+    normal, bold, reverse, underline, default_colors,
 )
 
-class HackerDracula(ColorScheme):
-    progress_bar_color = 99  # Bright magenta
+class SubtleHack(ColorScheme):
+    progress_bar_color = 22  # Dark green
 
     def verify_browser(self, context, fg, bg, attr):
         if context.selected:
-            attr = reverse
+            attr = underline | bold
+            fg = yellow  # Always yellow for selection
         else:
             attr = normal
         if context.empty or context.error:
-            bg = 52  # Dark red
-            fg = 15  # Bright white
+            fg = 1  # Dark red
         if context.border:
-            fg = 39  # Cyan
-            attr |= bold
+            fg = yellow  # Always yellow for border
         if context.document:
             attr |= normal
-            fg = 123  # Light cyan
+            fg = 252  # Light gray
         if context.media:
             if context.image:
-                attr |= normal
-                fg = 141  # Light purple
+                fg = 5  # Dark magenta
             elif context.video:
-                fg = 161  # Light red
+                fg = 1  # Dark red
             elif context.audio:
-                fg = 49  # Cyan
+                fg = 6  # Dark cyan
             else:
-                fg = 85  # Light green
+                fg = 2  # Dark green
         if context.container:
-            attr |= bold
-            fg = 208  # Orange
+            fg = 5  # Dark magenta
         if context.directory:
             attr |= bold
-            fg = 39  # Cyan
+            fg = 4  # Dark blue
         elif context.executable and not any(
             (context.media, context.container, context.fifo, context.socket)
         ):
             attr |= bold
-            fg = 118  # Light green
+            fg = 2  # Dark green
         if context.socket:
-            fg = 170  # Pink
-            attr |= bold
+            fg = 5  # Dark magenta
         if context.fifo or context.device:
-            fg = 214  # Orange
+            fg = 3  # Dark yellow
             if context.device:
                 attr |= bold
         if context.link:
-            fg = 51 if context.good else 161  # Cyan if good, light red if bad
+            fg = 6 if context.good else 1  # Dark cyan if good, dark red if bad
         if context.tag_marker and not context.selected:
             attr |= bold
-            fg = 161  # Light red
+            fg = 1  # Dark red
         if not context.selected and (context.cut or context.copied):
-            fg = 243  # Gray
+            fg = 234  # Darker gray
             attr |= bold
         if context.main_column:
             if context.selected:
-                attr |= bold
+                attr |= underline
+                fg = yellow  # Always yellow for main column selection
             if context.marked:
-                attr |= bold
-                fg = 226  # Yellow
+                attr |= underline
+                fg = 3  # Dark yellow
         if context.badinfo:
-            if attr & reverse:
-                bg = 161  # Light red
-            else:
-                fg = 161  # Light red
+            fg = 1  # Dark red
 
         if context.inactive_pane:
-            fg = 60  # Dark cyan
+            fg = 242  # Dark gray
 
         return fg, bg, attr
 
     def verify_titlebar(self, context, fg, bg, attr):
         attr |= bold
         if context.hostname:
-            fg = 161 if context.bad else 118  # Light red if bad, light green if good
+            fg = 1 if context.bad else 2  # Dark red if bad, dark green if good
         elif context.directory:
-            fg = 39  # Cyan
+            fg = 4  # Dark blue
         elif context.tab:
             if context.good:
-                bg = 118  # Light green
+                fg = 2  # Dark green
         elif context.link:
-            fg = 51  # Cyan
+            fg = 6  # Dark cyan
 
         return fg, bg, attr
 
     def verify_statusbar(self, context, fg, bg, attr):
         if context.permissions:
             if context.good:
-                fg = 118  # Light green
+                fg = 2  # Dark green
             elif context.bad:
-                bg = 161  # Light red
-                fg = 15  # Bright white
+                fg = 1  # Dark red
         if context.marked:
             attr |= bold | reverse
-            fg = 226  # Yellow
+            fg = 3  # Dark yellow
         if context.frozen:
             attr |= bold | reverse
-            fg = 51  # Cyan
+            fg = 6  # Dark cyan
         if context.message:
             if context.bad:
                 attr |= bold
-                fg = 161  # Light red
+                fg = 1  # Dark red
         if context.loaded:
             bg = self.progress_bar_color
         if context.vcsinfo:
-            fg = 39  # Cyan
+            fg = 4  # Dark blue
             attr &= ~bold
         if context.vcscommit:
-            fg = 226  # Yellow
-            attr &= ~bold
-        if context.vcsdate:
-            fg = 51  # Cyan
+            fg = 3  # Dark yellow
             attr &= ~bold
 
         return fg, bg, attr
 
     def verify_taskview(self, context, fg, bg, attr):
         if context.title:
-            fg = 39  # Cyan
+            fg = 4  # Dark blue
 
         if context.selected:
             attr |= reverse
+            fg = yellow  # Always yellow for taskview selection
 
         if context.loaded:
             if context.selected:
@@ -144,15 +134,15 @@ class HackerDracula(ColorScheme):
     def verify_vcsfile(self, context, fg, bg, attr):
         attr &= ~bold
         if context.vcsconflict:
-            fg = 161  # Light red
+            fg = 1  # Dark red
         elif context.vcschanged:
-            fg = 214  # Orange
+            fg = 3  # Dark yellow
         elif context.vcsunknown:
-            fg = 208  # Dark orange
+            fg = 245  # Light gray
         elif context.vcsstaged:
-            fg = 118  # Light green
+            fg = 2  # Dark green
         elif context.vcssync:
-            fg = 85  # Dark cyan
+            fg = 4  # Dark blue
         elif context.vcsignored:
             fg = 240  # Dark gray
 
@@ -161,15 +151,15 @@ class HackerDracula(ColorScheme):
     def verify_vcsremote(self, context, fg, bg, attr):
         attr &= ~bold
         if context.vcssync or context.vcsnone:
-            fg = 85  # Dark cyan
+            fg = 4  # Dark blue
         elif context.vcsbehind:
-            fg = 161  # Light red
+            fg = 1  # Dark red
         elif context.vcsahead:
-            fg = 118  # Light green
+            fg = 2  # Dark green
         elif context.vcsdiverged:
-            fg = 208  # Orange
+            fg = 3  # Dark yellow
         elif context.vcsunknown:
-            fg = 161  # Light red
+            fg = 245  # Light gray
 
         return fg, bg, attr
 
@@ -202,3 +192,4 @@ class HackerDracula(ColorScheme):
             fg, bg, attr = self.verify_vcsremote(context, fg, bg, attr)
 
         return fg, bg, attr
+
