@@ -16,8 +16,6 @@ case "$1" in
         exit 2
 esac
 
-play /usr/share/sounds/freedesktop/stereo/screen-capture.oga
-
 case "$2" in
     clipboard)
         xclip -selection clipboard -t "image/png" < $Location

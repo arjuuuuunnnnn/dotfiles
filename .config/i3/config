@@ -14,7 +14,7 @@ set $mod Mod4
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
 # font pango:monospace 8
-font pango:FreeMono 8
+font pango:FreeMono 11
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -271,4 +271,9 @@ bindsym XF86AudioPrev exec playerctl previous
 # Rofi launcher
 bindsym Mod1+space exec --no-startup-id rofi -show drun
 
+# lock
+bindsym Mod1+Shift+l exec --no-startup-id ~/.config/i3lock/i3lock.sh
+
+# ranger
+bindsym Ctrl+space exec --no-startup-id alacritty -e ranger
 
