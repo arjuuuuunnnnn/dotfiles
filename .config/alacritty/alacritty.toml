@@ -66,5 +66,5 @@ bindings = [
     { key = "T", mods = "Control|Shift", action = "CreateNewTab" },
 ]
 
-
-
+[env]
+TERM = "xterm-256color"
