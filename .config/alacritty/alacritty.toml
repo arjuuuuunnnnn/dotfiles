@@ -4,19 +4,19 @@ opacity = 0.6
 title = "hemanth@kali"
 
 [font]
-normal = {family = "FreeMono"}
-size = 12
+normal = {family = "JetBrains Mono"}
+size = 10
 
 [font.bold]
-family = "FreeMono"
-style = "Bold"
+family = "JetBrains Mono"
+style = "regular"
 
 [font.bold_italic]
-family = "FreeMono"
-style = "Bold"
+family = "JetBrains Mono"
+style = "Italic"
 
 [font.italic]
-family = "FreeMono"
+family = "JetBrains Mono"
 style = "Italic"
 
 
@@ -27,33 +27,33 @@ foreground = "#dfdfdf"
 
 [colors.normal]
 black =   '#000000'
-red =     '#AD4900'
-green =   '#6F8FAF'
-yellow =  '#AF8005'
-blue =    '#8BA446'
-magenta = '#6F8FAF'
-cyan =    '#21B0C6'
-white =   '#C1981E'
+red =     '#ad4900'
+green =   '#6981ff'
+yellow =  '#af8005'
+blue =    '#76a600'
+magenta = '#6981ff'
+cyan =    '#76a600'
+white =   '#deeed1'
 
 [colors.bright]
-    black =   '#5E5C64'
-    red =     '#AD4900'
-    green =   '#33D17A'
-    yellow =  '#B28817'
-    blue =    '#2CA600'
-    magenta = '#990B6C'
-    cyan =    '#33C7DE'
-    white =   '#03FC89'
+black =   '#5E5C64'
+red =     '#AD4900'
+green =   '#33D17A'
+yellow =  '#B28817'
+blue =    '#2CA600'
+magenta = '#990B6C'
+cyan =    '#33C7DE'
+white =   '#03FC89'
 
 [colors.dim]
-    black =   '#232323'
-    red =     '#74423f'
-    green =   '#5e6547'
-    yellow =  '#8b7653'
-    blue =    '#556b79'
-    magenta = '#6e4962'
-    cyan =    '#5c8482'
-    white =   '#828282'
+black =   '#232323'
+red =     '#74423f'
+green =   '#5e6547'
+yellow =  '#8b7653'
+blue =    '#556b79'
+magenta = '#6e4962'
+cyan =    '#5c8482'
+white =   '#828282'
 
 [cursor]
 style = "Underline"
@@ -68,3 +68,4 @@ bindings = [
 
 [env]
 TERM = "xterm-256color"
+LIBGL_ALWAYS_SOFTWARE = "1"

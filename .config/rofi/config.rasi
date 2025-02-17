@@ -1,5 +1,5 @@
 * {
-    font: "FreeMono 16";
+    font: "JetBrains Mono 12";
     g-spacing: 10px;
     g-margin: 0;
     b-color: #000000FF;
@@ -13,7 +13,7 @@
     w-border: 0px solid;
     w-border-color: #FFFFFFFF;
     w-padding: 12px;
-	prompt-color: #FFFFFFFF;
+	prompt-color: #b7df44;
 }
 
 configuration {

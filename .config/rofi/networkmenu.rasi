@@ -82,7 +82,7 @@ listview {
     columns:                        1;
     lines:							7;
     spacing:                        4px;
-    cycle:                          true;
+    cycle:                          false;
     dynamic:                        true;
     layout:                         vertical;
 }

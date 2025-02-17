@@ -19,6 +19,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="robbyrussel"
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
+POWERLEVEL9K_INSTANT_PROMPT=off
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -82,7 +84,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(
 	git
 	zsh-autosuggestions
-	zsh-syntax-highlighting 
+	zsh-syntax-highlighting
 	copyfile 
 	docker 
 	docker-compose 
@@ -105,6 +107,7 @@ fi
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -112,9 +115,9 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
+#   export EDITOR='nvim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='nvim'
 # fi
 
 # Compilation flags
@@ -256,10 +259,13 @@ alias l='ls -CF'
 alias update='sudo apt-get update'
 alias upgrade='sudo apt-get upgrade'
 alias c='clear'
-alias brave='brave-browser'
 alias x='exit'
 alias git push="git push -u origin main"
-alias music="deadbeef"
+alias bingo="~/.config/gemini.py"
+alias bro="gh copilot"
+
+export PATH=$PATH:~/blender/
+
 
 # enable auto-suggestions based on the history
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
@@ -273,27 +279,20 @@ if [ -f /etc/zsh_command_not_found ]; then
     . /etc/zsh_command_not_found
 fi
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/hemanth/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/hemanth/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/hemanth/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/hemanth/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 # Setting default Text editor to nvim
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR=nvim
+export VISUAL=nvim
 
 source ~/.config/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
+# Created by `pipx` on 2024-10-25 04:02:44
+export PATH="$PATH:/home/hemanth/.local/bin"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

@@ -6,7 +6,7 @@ URxvt.foreground:      #1d1f21
 
 
 
-# NEW
+! # NEW
 ! ## Enable a color supported XTerm ##
 XTerm.termName: xterm-256color
 
@@ -14,8 +14,8 @@ XTerm.termName: xterm-256color
 XTerm*VT100.geometry: 130x50
 
 ! ## Set font and fontsize ##
-XTerm*faceName: DejaVu Sans Mono Regular
-XTerm*faceSize: 14
+XTerm*faceName: JetBrains Mono
+XTerm*faceSize: 11
 
 ! VT Font Menu: Unreadable
 XTerm*faceSize1: 8
