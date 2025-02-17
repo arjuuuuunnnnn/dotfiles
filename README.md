@@ -10,7 +10,6 @@ for my i3 window manager
 8. ranger
 9. rofi
 
-![](image.png)
 
 
 for Autotiling enabled
