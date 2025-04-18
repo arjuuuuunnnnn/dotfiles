@@ -1,0 +1,28 @@
+{
+  "api_key": "valid_key",
+  "model": "gemini-2.0-flash",
+  "temperature": 0.2,
+  "max_tokens": 8192,
+  "exclude_dirs": [
+    "node_modules",
+    ".venv",
+    "venv",
+    ".git",
+    "__pycache__",
+    "dist",
+    "build",
+    ".pytest_cache",
+    ".next",
+    ".*"
+  ],
+  "exclude_files": [
+    ".env",
+    "*.pyc",
+    "*.jpg",
+    "*.png",
+    "*.pdf"
+  ],
+  "backup_files": true,
+  "history_size": 10,
+  "rate_limit_retries": 3
+}
