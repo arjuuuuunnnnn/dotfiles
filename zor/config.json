@@ -1,5 +1,4 @@
 {
-  "api_key": "valid_key",
   "model": "gemini-2.0-flash",
   "temperature": 0.2,
   "max_tokens": 8192,
@@ -24,5 +23,6 @@
   ],
   "backup_files": true,
   "history_size": 10,
-  "rate_limit_retries": 3
+  "rate_limit_retries": 3,
+  "api_key": "AIzaSyB6Y32JmIt9QLVXZzdqLU3Z4D8o597ybcg"
 }
