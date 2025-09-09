@@ -19,7 +19,8 @@
         "network",
         "battery",
         "backlight",
-        "pulseaudio"
+        "pulseaudio",
+        "pulseaudio#microphone",
     ],
 
     "hyprland/window": {
@@ -39,7 +40,7 @@
     },
 
     "clock": {
-        "format": "{:%A    %B-%d-%Y    %H:%M }",
+        "format": "{:%b-%d    %H:%M }",
         "interval": 1,
         "rotate": 0,
         "tooltip-format": "<tt>{calendar}</tt>",
@@ -56,7 +57,7 @@
             }
         }
     },
-
+    
     "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",
@@ -101,7 +102,7 @@
     "pulseaudio#microphone": {
         "format": "{format_source}",
         "format-source": " {volume}%",
-        "format-source-muted": "  Muted",
+        "format-source-muted": "  ",
         "on-click": "pamixer --default-source -t",
         "on-scroll-up": "pamixer --default-source -i 5",
         "on-scroll-down": "pamixer --default-source -d 5",
