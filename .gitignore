@@ -1,7 +1,9 @@
 autostart/
 go/
 BraveSoftware/
+configstore/
 kwallet6rc
+eas-cli-nodejs
 kwalletrc
 environment.d
 nautils/
@@ -36,3 +38,8 @@ dolphinrc
 pypoetry/
 uv/
 vlc/
+orchestry/
+procps/
+pypoetry/
+yazi/
+vscode-sqltools/
