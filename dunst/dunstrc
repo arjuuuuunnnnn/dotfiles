@@ -13,7 +13,7 @@
     text_icon_padding = 0
     frame_width = 2
 
-    frame_color = "#a6adc8"
+    frame_color = "#d2ad82"
     separator_color = frame
 
     sort = yes
@@ -46,13 +46,13 @@
 
 [urgency_low]
     background = "#1e1e2e"
-    foreground = "#CDD6F4"
+    foreground = "#efcb8d"
 
 [urgency_normal]
     background = "#1e1e2e"
-    foreground = "#CDD6F4"
+    foreground = "#efcb8d"
 
 [urgency_critical]
     background = "#1e1e2e"
-    foreground = "#CDD6F4"
-    frame_color = "#FAB387"
+    foreground = "#efcb8d"
+    frame_color = "#d2ad82"
